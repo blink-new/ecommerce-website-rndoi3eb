@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 96%;  /* Pearl White */
+    --foreground: 0 0% 13%;    /* Deep Charcoal */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+    
+    --primary: 45 52% 60%;      /* Rich Gold */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 33 12% 61%;    /* Warm Taupe */
+    --secondary-foreground: 0 0% 13%;
+    
+    --muted: 120 12% 84%;       /* Soft Sage */
+    --muted-foreground: 0 0% 13%;
+    
+    --accent: 210 38% 17%;      /* Midnight Navy */
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 33 12% 80%;
+    --input: 33 12% 85%;
+    --ring: 45 52% 60%;
+    
+    --radius: 0.5rem;
+
+    /* Sidebar remained unchanged */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 38% 15%;
+    --foreground: 0 0% 98%;
+    
+    --card: 210 38% 15%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 210 38% 15%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 45 52% 60%;
+    --primary-foreground: 240 5.9% 10%;
+    
+    --secondary: 33 12% 61%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 120 12% 64%;
+    --muted-foreground: 0 0% 98%;
+    
+    --accent: 0 0% 100%;
+    --accent-foreground: 210 38% 15%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 45 52% 60%;
+
+    /* Sidebar remained unchanged */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-luxe-white text-luxe-charcoal font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-medium;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl font-medium;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl font-medium;
+  }
+  h4 {
+    @apply text-xl md:text-2xl font-medium;
+  }
+  button, .btn, a.btn {
+    @apply font-accent tracking-wide;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  .animate-fade {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-in-out;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
